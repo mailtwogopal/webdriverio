@@ -1,0 +1,20 @@
+{
+  "name": "wdio-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio",
+    "smoke": "wdio wdio.conf.js --suite smoke"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "webdriverio": "^4.14.4"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.6.4"
+  }
+}
