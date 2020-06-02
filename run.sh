@@ -1,0 +1,1 @@
+set NODE_ENV = %1&& npm run smoke

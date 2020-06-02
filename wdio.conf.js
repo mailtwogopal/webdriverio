@@ -1,6 +1,10 @@
-
+const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
 
 exports.config = {
+
+    hostname: 'localhost',
+    port: 4545,
+    //path: '/',
     
     //
     // ==================
@@ -41,6 +45,7 @@ exports.config = {
     // from the same test should run tests.
     //
     maxInstances: 10,
+    
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -131,12 +136,24 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    // reporters: ['dot'],
+     reporters: ['dot', 'mochawesome'],
+     reporterOptions : {
+        outputDir: './TestResults'
+        //mochawesomefilename: 'myfile.json' // it defaults to wdiomochawesome.json if no name provided
+     },
+     mochawesomeOpts : {
+         includeScreenshots : true,
+         
+         screenshotUseRelativePath: true
+     },
+    //reporters: [['timeline', { outputDir: './test/TestResults' }]],
+    //services: [[TimelineService]],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 100000
     },
     //
     // =====
