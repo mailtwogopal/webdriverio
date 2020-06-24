@@ -15,7 +15,7 @@ services:
     environment: 
      - HUB_HOST=selenium-hub
      - HUB_PORT=4444
-     - NODE_MAX_SESSION=2
+     - NODE_MAX_SESSION=3
      - NODE_MAX_INSTANCES=8
     ports:
       - "5900:5900"
@@ -31,7 +31,7 @@ services:
     environment: 
      - HUB_HOST=selenium-hub
      - HUB_PORT=4444
-     - NODE_MAX_SESSION=2
+     - NODE_MAX_SESSION=3
      - NODE_MAX_INSTANCES=5
     ports:
       - "5901:5901"
